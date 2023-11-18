@@ -1,9 +1,13 @@
 import { GetTimeFunc, IParsedDate } from 'src/types';
-import { parseClockTime, getCurrentTime, compose, doubleDigits, clockFormat } from '../';
+import { parseClockTime, getCurrentTime, compose, doubleDigits, clockFormat, separateDateStr } from '../';
 
 export const getTaskCreatingTime: GetTimeFunc = () => {
 	const parsedClockTime: IParsedDate = parseClockTime(getCurrentTime());
-	const creatingTime = compose(doubleDigits, clockFormat('dd-mnth-year hh:mm'))(parsedClockTime);
+	const creatingTime: string[] = compose(
+		doubleDigits,
+		clockFormat('dd-mnth-year hh:mm'),
+		separateDateStr
+	)(parsedClockTime);
 
 	return creatingTime;
 };

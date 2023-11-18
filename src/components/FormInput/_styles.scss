@@ -5,5 +5,6 @@
 
 	&:invalid {
 		outline: 1px solid $danger;
+		color: $danger;
 	}
 }

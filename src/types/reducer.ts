@@ -14,7 +14,7 @@ export interface ITaskEntity {
 	id: string;
 	userText: string;
 	isChecked: boolean;
-	creatingDate: string;
+	creatingDate: string[];
 }
 
 interface ITaskCreation {

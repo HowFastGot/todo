@@ -41,7 +41,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			<main className='px-2 px-sm-5'>
+			<main className='px-1 px-sm-5'>
 				<section className='section-container'>
 					<Form dispatch={dispatch} />
 				</section>

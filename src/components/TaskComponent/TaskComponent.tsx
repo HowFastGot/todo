@@ -22,14 +22,14 @@ export function TaskComponent({
 	const textColor = isChecked ? 'text-secondary' : 'text-black';
 
 	return (
-		<li className={cn('d-flex gap-2 justify-content-between align-items-center p-3', textColor)}>
+		<li className={cn('task_component', textColor)}>
 			<input
 				className={inputStyles}
 				type='checkbox'
 				checked={isChecked}
 				onChange={() => handleTaskComplete(id, !isChecked)}
 			/>
-			<p className='lh-1'>{userText}</p>
+			<p className='lh-1 fs-6 flex-grow-1 '>{userText}</p>
 			<CreateTime time={creatingDate} />
 			<DeleteButton handleTaskDelete={handleTaskDelete} isChecked={isChecked} id={id} />
 		</li>

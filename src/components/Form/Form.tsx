@@ -66,7 +66,7 @@ export function Form({ dispatch }: IFormProp) {
 	}, [adjustClearErrorTimeout, errorMessage]);
 
 	return (
-		<form action='#' onSubmit={handleSubmit(handleFormSubmit)} className='position-relative'>
+		<form action='#' className='position-relative w-100%' onSubmit={handleSubmit(handleFormSubmit)}>
 			<div className='w-100 mx-auto row gap-3 justify-content-center flex-sm-nowrap  align-content-center'>
 				<FormInput value={debounceUserText} onChange={onChange} register={register} />
 

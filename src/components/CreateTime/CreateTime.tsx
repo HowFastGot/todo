@@ -1,3 +1,4 @@
-export function CreateTime({ time }: { time: string }) {
-	return <time className='flex-grow-1 text-end text-nowrap'>{time}</time>;
+export function CreateTime({ time }: { time: string[] }) {
+	const timeElements = time.map((t) => <span className='text-nowrap'>{t}</span>);
+	return <time className='fs-6'>{timeElements}</time>;
 }
