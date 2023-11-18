@@ -1,0 +1,9 @@
+.user-input {
+	&:focus {
+		outline: 1px solid $primary;
+	}
+
+	&:invalid {
+		outline: 1px solid $danger;
+	}
+}
