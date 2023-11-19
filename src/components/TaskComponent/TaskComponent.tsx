@@ -19,17 +19,23 @@ export function TaskComponent({
 	const checkboxColor = isChecked ? 'primary' : 'secondary';
 	const inputStyles = `form-check-input cursor-pointer bg-body-${checkboxColor}`;
 
-	const textColor = isChecked ? 'text-secondary' : 'text-black';
-
 	return (
-		<li className={cn('task_component', textColor)}>
+		<li
+			className={cn('task_component', {
+				'text-secondary': isChecked,
+			})}>
 			<input
 				className={inputStyles}
 				type='checkbox'
 				checked={isChecked}
 				onChange={() => handleTaskComplete(id, !isChecked)}
 			/>
-			<p className='lh-1 fs-6 flex-grow-1 '>{userText}</p>
+			<p
+				className={cn('lh-1 fs-6 ', {
+					'fw-light': isChecked,
+				})}>
+				{userText}
+			</p>
 			<CreateTime time={creatingDate} />
 			<DeleteButton handleTaskDelete={handleTaskDelete} isChecked={isChecked} id={id} />
 		</li>

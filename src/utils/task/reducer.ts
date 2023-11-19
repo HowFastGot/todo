@@ -1,7 +1,7 @@
 import { Actions, ActionType, IStateInitial } from 'src/types';
 import { handleInputCheck, deleteChangedTask, findChangedTask, getChangedTaskIndex } from '../';
 
-export const initalState = {
+export const initalState: IStateInitial = {
 	tasks: [],
 	completedTask: [],
 };

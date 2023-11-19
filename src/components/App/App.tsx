@@ -1,12 +1,26 @@
-import { useCallback, useMemo, useReducer } from 'react';
+import { useEffect, useCallback, useMemo, useReducer } from 'react';
 
 import { Form, Header, TaskList } from '..';
 
 import { initalState, reducer } from 'src/utils';
-import { ActionType } from 'src/types';
+import { getStateFromLocalStorage, saveStateToLocalStorage } from 'src/utils/localStorage';
+
+import { ActionType, IStateInitial } from 'src/types';
 
 function App() {
-	const [state, dispatch] = useReducer(reducer, initalState);
+	const initState = (state: IStateInitial): IStateInitial => {
+		const memorizedTasks = getStateFromLocalStorage(state);
+
+		if (memorizedTasks) {
+			return memorizedTasks;
+		} else {
+			return state;
+		}
+	};
+
+	const [state, dispatch] = useReducer(reducer, initalState, initState);
+
+	const memoState = useMemo(() => state, [state]);
 
 	const completedTasks = useMemo(() => {
 		return state.completedTask.filter((t) => t.isChecked);
@@ -37,6 +51,10 @@ function App() {
 		handleTaskDelete,
 	};
 	const isDoneTasks = state.completedTask.length > 0;
+
+	useEffect(() => {
+		saveStateToLocalStorage(memoState);
+	}, [memoState]);
 
 	return (
 		<>
