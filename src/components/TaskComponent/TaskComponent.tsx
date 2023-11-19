@@ -16,8 +16,8 @@ export function TaskComponent({
 	handleTaskComplete,
 	handleTaskDelete,
 }: ITaskProp) {
-	const checkboxColor = isChecked ? 'primary' : 'secondary';
-	const inputStyles = `form-check-input cursor-pointer bg-body-${checkboxColor}`;
+	const checkboxColor = isChecked ? 'primary' : 'dark-subtle';
+	const inputStyles = `form-check-input cursor-pointer bg-${checkboxColor}`;
 
 	return (
 		<li

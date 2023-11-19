@@ -11,7 +11,7 @@ export function TaskList({ taskList, children, ...props }: ITaskListProp) {
 	if (taskList.length < 1) return null;
 
 	return (
-		<ul className='task_container border border-gray'>
+		<ul className='task_container border border-dark-subtle'>
 			{children}
 			{taskList.map((task) => {
 				return <TaskComponent {...task} {...props} key={task.id} />;

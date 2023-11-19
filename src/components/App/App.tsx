@@ -59,7 +59,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			<main className='px-1 px-sm-5'>
+			<main className='px-1 px-sm-5 py-2'>
 				<section className='section-container'>
 					<Form dispatch={dispatch} />
 				</section>

@@ -17,9 +17,29 @@
 //</Подключаем файлы стилей====================================================================================
 //-<Обнуление общиих параметров>-===================================================
 body {
+	height: auto;
 	font-family: $font-family;
 	color: #000;
 	font-size: 16px;
+	background-image: radial-gradient(
+		circle at 56.16% -20.44%,
+		#ffffff 0,
+		#ffffff 7.14%,
+		#ffffff 14.29%,
+		#ffffff 21.43%,
+		#ffffff 28.57%,
+		#ffffff 35.71%,
+		#ffffff 42.86%,
+		#f8f9f9 50%,
+		#e3f0f1 57.14%,
+		#cfe7ea 64.29%,
+		#bedee6 71.43%,
+		#aed6e3 78.57%,
+		#a1cfe2 85.71%,
+		#97c8e1 92.86%,
+		#90c1e0 100%
+	);
+	background-size: fill;
 }
 //-<Обнуление общих параметров>-===================================================
 
@@ -50,7 +70,7 @@ body {
 
 .task_container {
 	li:not(:first-child) {
-		border-top: 1px solid $gray-400;
+		border-top: 1px solid $gray-500;
 	}
 }
 

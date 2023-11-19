@@ -29,7 +29,7 @@ export function FormInput({ value, onChange: onInputChange, register }: IInputPr
 				onInputChange(e);
 				onChange(e);
 			}}
-			className='user-input border col-12 col-sm-10 rounded '
+			className='user-input border border-dark-subtle col-12 col-sm-10 rounded '
 			style={{ minHeight: 40 }}
 			type='text'
 			placeholder='New task'
