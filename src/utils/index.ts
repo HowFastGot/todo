@@ -6,7 +6,6 @@ export { parseClockTime } from './date/parseClockTime';
 export { prependZero } from './date/prependZero';
 export { doubleDigits } from './date/doubleDigits';
 export { getTaskCreatingTime } from './date/getTaskCreatingTime';
-export { separateDateStr } from './date/separateDateStr';
 
 export { reducer, initalState } from './task/reducer';
 export { getChangedTaskIndex } from './task/getChangedTaskIndex';

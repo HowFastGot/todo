@@ -64,7 +64,7 @@ function App() {
 					<Form dispatch={dispatch} />
 				</section>
 				<section className='section-container'>
-					<TaskList taskList={state.tasks} {...taskListFunctionProps} />
+					<TaskList taskList={memoState.tasks} {...taskListFunctionProps} />
 				</section>
 				<section className='section-container'>
 					{isDoneTasks && <h3 className='h3'>Done</h3>}
